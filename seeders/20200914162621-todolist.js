@@ -4,30 +4,24 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert("todoLists", [
       {
-        name: "one to do thing",
+        name: "George's Work list",
+        userId: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        name: "two to do thing",
+        name: "George's Personal list",
+        userId: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        name: "three to do thing",
+        name: "Leo's futbol list",
+        userId: 2,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
     ]);
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-     */
   },
 
   down: async (queryInterface, Sequelize) => {
